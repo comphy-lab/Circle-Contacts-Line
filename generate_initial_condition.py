@@ -303,13 +303,13 @@ def generate_initial_conditions(delta, data_folder, image_folder=None,
     Interface, X1, Y1, Xf, Yf, X2, Y2, Circle1, X1Full, Y1Full = get_circles(delta)
 
     # Save data files
-    f1_path = os.path.join(data_folder, "f1_init.dat")
-    Interface.to_csv(f1_path, index=False, header=False, sep=' ')
-    print(f"  Saved: {f1_path}")
+    f_path = os.path.join(data_folder, "f_init.dat")
+    Interface.to_csv(f_path, index=False, header=False, sep=' ')
+    print(f"  Saved: {f_path}")
 
-    f2_path = os.path.join(data_folder, "f2_init.dat")
-    Circle1.to_csv(f2_path, index=False, header=False, sep=' ')
-    print(f"  Saved: {f2_path}")
+    f_drop_path = os.path.join(data_folder, "f-drop_init.dat")
+    Circle1.to_csv(f_drop_path, index=False, header=False, sep=' ')
+    print(f"  Saved: {f_drop_path}")
 
     # Also save to f_Testing.dat for Basilisk
     Interface.to_csv('f_Testing.dat', index=False, header=False, sep=' ')

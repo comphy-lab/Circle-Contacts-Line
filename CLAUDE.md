@@ -39,8 +39,8 @@ The interface consists of three connected segments:
 ### Output Structure
 ```
 DataFiles_delta{value}/
-  f1_init.dat          # Interface: circle + fillet + vertical line
-  f2_init.dat          # Full circle 1 (for filling)
+  f_init.dat           # Interface: circle + fillet + vertical line
+  f-drop_init.dat      # Full drop circle (for filling)
 
 ImageFiles_delta{value}/
   TestWithoutBasilisk.pdf    # Pure geometry visualization

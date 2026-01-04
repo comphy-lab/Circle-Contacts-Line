@@ -31,8 +31,8 @@ Circle-Contacts-Line/
 ├── InitialCondition.ipynb         # Interactive notebook
 ├── InitialCondition.c             # Basilisk C code
 ├── DataFiles_delta{value}/        # Data outputs
-│   ├── f1_init.dat                # Interface coordinates
-│   └── f2_init.dat                # Full circle coordinates
+│   ├── f_init.dat                 # Interface coordinates
+│   └── f-drop_init.dat            # Full drop circle coordinates
 ├── ImageFiles_delta{value}/       # Image outputs
 │   ├── TestWithoutBasilisk.pdf    # Pure geometry
 │   └── TestWithBasilisk.pdf       # Basilisk comparison
