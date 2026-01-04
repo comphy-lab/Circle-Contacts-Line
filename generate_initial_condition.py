@@ -76,6 +76,11 @@ def get_circles(delta):
     X1Full = -(X1Full - Xf[-1])
     Xf = -(Xf - Xf[-1])
 
+    # Reflect about x=0 so circle is in -x region
+    X1 = -X1
+    X1Full = -X1Full
+    Xf = -Xf
+
     # Vertical line (wall contact)
     X2 = Xf[-1] * np.ones(len(X1))
     Y2 = np.linspace(Yf[-1], 16, len(X1))
@@ -152,7 +157,7 @@ def plot_interfaces(Interface, X1, Y1, Xf, Yf, X2, Y2, X1Full, Y1Full,
     ax1.plot(X1Full, Y1Full, '-', lw=2, color='k')
     ax1.plot([xW1, xW2, xW2, xW1, xW1], [yW1, yW1, yW2, yW2, yW1], 'k-', lw=2)
     ax1.axis('square')
-    ax1.set_xlim(-delta, delta + 2 + 0.5)
+    ax1.set_xlim(-(delta + 2 + 0.5), delta)
     ax1.set_ylim(0, 1.1)
     ax1.set_xlabel(r'$\mathcal{Z}$', fontsize=24)
     ax1.set_ylabel(r'$\mathcal{R}$', fontsize=24)
@@ -225,7 +230,7 @@ def plot_interfaces_basilisk(Interface, facets, delta, image_name, show=False):
     ax1.add_collection(line_segments)
     ax1.plot([xW1, xW2, xW2, xW1, xW1], [yW1, yW1, yW2, yW2, yW1], 'k-', lw=2)
     ax1.axis('square')
-    ax1.set_xlim(-delta, delta + 2 + 0.5)
+    ax1.set_xlim(-(delta + 2 + 0.5), delta)
     ax1.set_ylim(0, 1.1)
     ax1.set_xlabel(r'$\mathcal{Z}$', fontsize=24)
     ax1.set_ylabel(r'$\mathcal{R}$', fontsize=24)
